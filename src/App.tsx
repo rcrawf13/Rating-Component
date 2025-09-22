@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Stars from './components/Stars';
 
 function App({heading = 'How Was Your Experience?'}) {
   const rating = Array.from({length:5},(_,index)=>index+1)
@@ -10,24 +11,11 @@ function App({heading = 'How Was Your Experience?'}) {
     <>
       <div className='rating-box'>
         <h1>{heading}</h1>
-        <div className='star-container'>
-          {
-          rating.map((star)=>(
-            <p 
-              onMouseEnter={()=> setHover(star)}
-              onMouseLeave={()=>setHover(0)}
-              onClick={()=> setSelectedRating(star)}
-              className={star <= (hover||selectedRating) ?'isActive':''} 
-              key={`star-${star}`}>{'\u2605'}
-            </p>
-            
-            ))
-        }
-
-      </div>
+        <Stars rating = {rating} setHover={setHover} setSelectedRating={setSelectedRating} selectedRating={selectedRating} hover={hover} />
             <p 
             style={selectedRating===1?({'color':'red'}):(selectedRating===5?({'color':'green'}):({'color':''}))}
-            >{feedbackMessage[selectedRating-1]}</p>
+            >{feedbackMessage[selectedRating-1]}
+            </p>
       </div>
 
 
