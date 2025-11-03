@@ -64,3 +64,54 @@ h1 {
  text-align: center;
  font-weight: 900;
 }
+
+
+
+.focus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.574);
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.modal {
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 70%;
+  height: 50%;
+  max-height: 276.226px;
+  background-color: rgb(66, 68, 66);
+}
+
+
+.subButton {
+  background-color: rgb(0, 166, 255);
+  border: none;
+  border-radius: 5px;
+  height: auto;
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: aliceblue;
+  
+}
+
+.subButton:hover {
+    background-color: rgb(16, 111, 163);
+    cursor: pointer;
+  }
+
+
+  .response {
+    font-size: 2rem;
+  }
